@@ -7,11 +7,11 @@
     cursor: cell;
 }
 
-h1{
+.flexbox h1{
     font-family: AkzidenzGrotesk;
-    font-size: 24vmin;
-    margin-top: -6vh;
-    padding-left: 25vw;
+    font-weight: 100;
+    font-size: 22.7vh;
+    translate: 0 -6vh;
 }
 
 #cursor{
@@ -26,6 +26,7 @@ h1{
     border-style: groove;
     border-color: black;
     z-index: 100;
+    pointer-events: none;
 }
 
 .wrapper{
@@ -38,14 +39,28 @@ h1{
     display: flex;
     flex-wrap: wrap;
     background-size: cover;
-    background-position: center center;
+    background-position: top;
     background-image: url('images/moliets-background.jpg');
 }
 
 .flexbox{
     width: 100vw;
-    height: 12.5vh;
+    height: 11.111vh;
     box-shadow: inset 0px 0px 0px 1px black;
     mix-blend-mode: hard-light;
+    display: flex;
+    justify-content: space-around;
+    column-gap: 0vw;
+    /* transition: all 100ms ease-in-out; */
+}
+
+.flexbox:hover{
+}
+
+.flexbox:nth-child(4){
+    column-gap: 35vw;
+}
+
+.flexbox:nth-child(6){
 
 }
