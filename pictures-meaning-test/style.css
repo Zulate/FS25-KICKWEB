@@ -7,6 +7,25 @@
     cursor: cell;
 }
 
+p{
+    font-family: AkzidenzGrotesk;
+    font-size: 6vmin;
+    padding: 15px;
+    transition: all 300ms ease-in-out;
+}
+
+h1{
+    font-family: AkzidenzGrotesk;
+    font-weight: 100;
+    font-size: 22.9vh;
+    translate: 6vw -0.15vh;
+    transition: all 300ms ease-in-out;
+}
+
+.div h1:nth-child(2){
+    align-items: end;
+}
+
 #cursor{
     position: fixed;
     width: 100px;
@@ -22,26 +41,18 @@
     pointer-events: none;
 }
 
-/*
-.flexbox h1{
-    font-family: AkzidenzGrotesk;
-    font-weight: 100;
-    font-size: 22.7vh;
-    translate: 0 -6vh;
+#landing{
+    background-size: cover;
+    background-position: top;
+    background-image: url('images/moliets-background.jpg');
 }
+
+/*
+
 
 .wrapper{
     display: flex;
     flex-wrap: wrap;
-}
-
-#landing{
-    height: 100vh;
-    display: flex;
-    flex-wrap: wrap;
-    background-size: cover;
-    background-position: top;
-    background-image: url('images/moliets-background.jpg');
 }
 
 .flexbox{
@@ -71,18 +82,12 @@
     width: 100vw;
     height: 100vh;
     grid-template-columns: 10vw 1fr 10vw;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-}
-
-div{
-    font-family: AkzidenzGrotesk;
-    font-weight: 100;
-    font-size: 5vw;
+    grid-template-rows: 11.111vh 11.111vh 11.111vh 11.111vh 11.111vh 11.111vh 11.111vh 11.111vh 11.111vh;
+    transition: all 300ms ease-in-out;
 }
 
 .items-middle{
     display: flex;
-    background-color: red;
     align-items: center;
     border: 1px black solid;
     grid-column: 2 / span 1;
@@ -90,13 +95,16 @@ div{
 
 .balken-links-oben{
     box-shadow: inset 0px 0px 0px 1px black;
-    background-color: green;
     grid-row: 1 / span 2;
     grid-column: 1 / span 1;
 }
 
+.griddler:has(.balken-links-oben:nth-child(1):hover){
+    grid-template-columns: 20vw 1fr 8vw;
+}
+
 .balken-links-unten{
-    background-color: green;
+    box-shadow: inset 0px 0px 0px 1px black;
     grid-row: 7 / span 3;
     grid-column: 1 / span 1;
 }
@@ -114,19 +122,16 @@ div{
 
 .balken-rechts-oben{
     box-shadow: inset 0px 0px 0px 1px black;
-    background-color: turquoise;
     grid-column: 3 / span 1;
     grid-row: 1 / span 2;
 }
 
 .balken-rechts-oben:nth-child(14){
-    box-shadow: inset 0px 0px 0px 1px black;
     grid-row: 3 / span 2;
     grid-column: 3 / span 1;
 }
 
 .balken-rechts-oben:nth-child(15){
-    box-shadow: inset 0px 0px 0px 1px black;
     grid-row: 5 / span 2;
     grid-column: 3 / span 1;
 }
