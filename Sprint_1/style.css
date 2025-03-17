@@ -20,11 +20,11 @@ h1{
     font-family: AkzidenzGrotesk;
     font-weight: 100;
     font-size: 22.9vh;
-    translate: 3vw -2.7vh;
+    translate: 3vw -0.2vh;
 }
 
 
-.items-middle-left:nth-child(10) h1{translate: 19vw -2.7vh}
+.items-middle-left:nth-child(10) h1{translate: 19vw -0.2vh}
 
 #cursor{
     position: fixed;
