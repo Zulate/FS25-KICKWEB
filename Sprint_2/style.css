@@ -30,8 +30,8 @@ p:nth-child(even){
 h1{
     font-family: AkzidenzGrotesk;
     font-weight: 100;
-    font-size: 22.7vh;
-    translate: -100vw -0.1vh;
+    font-size: 23vh;
+    translate: -100vw -0.2vh;
     animation: wordslideleft 4s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
 }
 
@@ -41,23 +41,23 @@ h1:nth-child(even){
 }
 
 @keyframes wordslideleft{
-    from {translate: -100vw -0.1vh;}
-    to {translate: 3vw -0.1vh;}
+    from {translate: -100vw -0.2vh;}
+    to {translate: 3vw -0.2vh;}
 }
 
 @keyframes wordslideright{
-    from {translate: 100vw -0.1vh;}
-    to {translate: 3vw -0.1vh;}
+    from {translate: 100vw -0.2vh;}
+    to {translate: 3vw -0.2vh;}
 }
 
 @keyframes meaningslide{
-    from {translate: -100vw -0.1vh;}
-    to {translate: 19vw -0.1vh;}
+    from {translate: -100vw -0.2vh;}
+    to {translate: 19vw -0.2vh;}
 }
 
 @keyframes meaningslideright{
-    from {translate: 100vw -0.1vh;}
-    to {translate: 19vw -0.1vh;}
+    from {translate: 100vw -0.2vh;}
+    to {translate: 19vw -0.2vh;}
 }
 
 .items-middle-left:nth-child(10) h1{translate: -100vw -0.1vh; animation: meaningslide 4s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;}
