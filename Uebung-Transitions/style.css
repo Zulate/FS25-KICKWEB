@@ -1,0 +1,28 @@
+*{
+    padding: 0;
+    margin: 0;
+    
+}
+
+body{
+
+}
+
+.cube{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    width: 500px;
+    height: 500px;
+    background-color:crimson;
+    transition: all 0.5s ease;
+    transition-delay: 400ms;
+}
+
+.cube:hover{
+    transform: rotate(90deg);
+    background-color: cornflowerblue;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0ms;
+}

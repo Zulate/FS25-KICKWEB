@@ -1,17 +1,18 @@
 @font-face { font-family: AkzidenzGrotesk; src: url('fonts/Akzidenz-grotesk-roman.ttf'); }
+@font-face { font-family: AkzidenzGrotesk-Black; src: url('fonts/Akzidenz-grotesk-black.ttf'); }
 
 *{
     padding: 0;
     margin: 0;
     -webkit-user-drag: none;
     cursor: cell;
-    transition: all 300ms ease-in-out;
+     /* transition: all 300ms ease-in-out; */
 }
 
 p{
-    font-family: AkzidenzGrotesk;
-    font-size: 6vmin;
-    padding: 10px;
+    font-family: AkzidenzGrotesk-Black;
+    font-size: 2.5vmin;
+    translate: 3vw 3.3vh;
 }
 
 
@@ -25,6 +26,7 @@ h1{
 
 
 .items-middle-left:nth-child(10) h1{translate: 19vw -0.15vh}
+.items-middle-left:nth-child(10) p{translate: 19vw 3.3vh}
 
 #cursor{
     position: fixed;
@@ -43,12 +45,10 @@ h1{
 }
 
 #landing{
-    width: 100vw;
     height: 100vh;
+    background-position: bottom;
     background-size: cover;
-    background-position: 0 -8.3vh;
     background-image: url('images/moliets-background.jpg');
-    /* overflow: hidden; */
 }
 
 .griddler{
