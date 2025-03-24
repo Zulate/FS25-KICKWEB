@@ -60,8 +60,15 @@ h1:nth-child(even){
     to {translate: 19vw -0.2vh;}
 }
 
+@keyframes meaningslidename{
+    from {translate: 100vw -0.2vh;}
+    to {translate: 8.3vw 2vh;}
+}
+
+
 .items-middle-left:nth-child(10) h1{translate: -100vw -0.1vh; animation: meaningslide 4s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;}
 .items-middle-left:nth-child(10) p{translate: -100vw 3.3vh; animation: meaningslideright 4s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;}
+.items-middle-left:nth-child(10) .daplug{animation: meaningslidename 4s cubic-bezier(0.075, 0.82, 0.165, 1) forwards; padding-right: 1vw;}
 
 #cursor{
     position: fixed;
@@ -88,8 +95,8 @@ h1:nth-child(even){
 }
 
 @keyframes landingslide{
-    0%{background-position: -100vw 0;}
-    100%{background-position: 0 0;}
+    0%{opacity: 0;}
+    100%{opacity: 1;}
 }
 
 .griddler{
@@ -105,6 +112,7 @@ h1:nth-child(even){
 
 .items-middle-left{
     display: flex;
+    flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
     grid-column: 2 / span 1;
@@ -120,6 +128,7 @@ h1:nth-child(even){
 .items-middle-left:nth-child(8)::after{content: ""; background: black;position: absolute;bottom: 0;left: 0;height: 2px;width: 0%; animation: lineleft4 8s cubic-bezier(0.075, 0.82, 0.165, 1) 9s forwards;}
 .items-middle-left:nth-child(9)::after{content: ""; background: black;position: absolute;bottom: 0;right: -17vw;height: 2px;width: 0%; animation: lineleft5 8s cubic-bezier(0.075, 0.82, 0.165, 1) 2s forwards;}
 .items-middle-left:nth-child(10)::after{content: ""; background: black;position: absolute;bottom: 0;left: 0;height: 2px;width: 0%; animation: lineleft6 8s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;}
+
 
 @keyframes lineleft1{0%{width:0%;}100%{width: 47%;}}
 @keyframes lineleft2{0%{width:0%;}100%{width: 85%;}}
