@@ -42,12 +42,12 @@ h1:nth-child(even){
 
 @keyframes wordslideleft{
     from {translate: -100vw -0.2vh;}
-    to {translate: 3vw -0.2vh;}
+    to {translate: 1vw -0.2vh;}
 }
 
 @keyframes wordslideright{
     from {translate: 100vw -0.2vh;}
-    to {translate: 3vw -0.2vh;}
+    to {translate: 1vw -0.2vh;}
 }
 
 @keyframes meaningslide{
@@ -61,10 +61,14 @@ h1:nth-child(even){
 }
 
 @keyframes meaningslidename{
-    from {translate: 100vw -0.2vh;}
+    from {translate: 100vw 2vh;}
     to {translate: 8.3vw 2vh;}
 }
 
+@keyframes textslide{
+    from {translate: 100vw 0vh;}
+    to {translate: -2vw 0vh;}
+}
 
 .items-middle-left:nth-child(10) h1{translate: -100vw -0.1vh; animation: meaningslide 4s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;}
 .items-middle-left:nth-child(10) p{translate: -100vw 3.3vh; animation: meaningslideright 4s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;}
@@ -152,11 +156,13 @@ h1:nth-child(even){
 .items-middle-right:nth-child(16)::after{content: ""; background: black;position: absolute;bottom: 0;right: 0;height: 2px;width: 0%; animation: lineright3 8s cubic-bezier(0.075, 0.82, 0.165, 1) 7s forwards;}
 .items-middle-right:nth-child(17){grid-row: 4 / span 1;position: relative;}
 .items-middle-right:nth-child(17)::after{content: ""; background: black;position: absolute;bottom: 0;right: 0;height: 2px;width: 0%; animation: lineright4 8s cubic-bezier(0.075, 0.82, 0.165, 1) 8s forwards;}
-.items-middle-right:nth-child(18){grid-row: 5 / span 1;}
+.items-middle-right:nth-child(18){grid-row: 5 / span 1; justify-content: end;}
 .items-middle-right:nth-child(19){grid-row: 6 / span 1;}
 .items-middle-right:nth-child(20){grid-row: 7 / span 1;}
 .items-middle-right:nth-child(21){grid-row: 8 / span 1;}
 .items-middle-right:nth-child(22){grid-row: 9 / span 1;}
+
+.items-middle-right:nth-child(18) p{animation: textslide 4s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;}
 
 @keyframes lineright1{0%{width:0%;}100%{width: 59%;}}
 @keyframes lineright2{0%{width:0%;}100%{width: 95%;}}
