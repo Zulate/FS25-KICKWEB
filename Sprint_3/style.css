@@ -14,13 +14,18 @@
     transition: grid 300ms ease-in-out;
 }
 
-p{
+.griddler p{
     font-family: AkzidenzGrotesk-Black;
     font-size: 2.5vh;
     translate: -100vw 3.3vh;
 }
 
 h1{
+    font-family: AkzidenzGrotesk-Black;
+    font-size: 23vh;
+}
+
+.griddler h1{
     font-family: AkzidenzGrotesk;
     font-weight: 100;
     font-size: 23vh;
@@ -33,6 +38,12 @@ h1{
     background-image: url('images/moliets-background.jpg');
     animation: landingslide 2s ease forwards;
     background-repeat: no-repeat;
+    display: block;
+}
+
+.content{
+    width: 100%;
+    height: 100vh;
 }
 
 /* -------------------- CURSOR -------------------- */
@@ -96,15 +107,15 @@ h1{
 
 /* -------------------- DEFINING GRID -------------------- */
 
+@keyframes griddleranimation { 0% {grid-template-columns: 3vw 54vw 40vw 3vw;} 50% {grid-template-columns: 3vw 47vw 47vw 3vw;} 100% {grid-template-columns: 3vw 54vw 40vw 3vw;}}
+
 .griddler{
     display: grid;
     grid-template-columns: 3vw 47vw 47vw 3vw;
     grid-template-rows: 11.111111vh 11.111111vh 11.111111vh 11.111111vh 11.111111vh 11.111111vh 11.111111vh 11.111111vh 11.111111vh;
     overflow: hidden;
-}
-
-.griddler:has(.balken-links-oben:hover){
-    grid-template-columns: 9vw 44vw 44vw 3vw;
+    animation: griddleranimation 6s ease-in-out forwards;
+    animation-iteration-count: infinite;
 }
 
 /* -------------------- DEFINING ELEMENTS ON LEFT SIDE -------------------- */
@@ -172,7 +183,6 @@ h1{
     grid-column: 4 / span 1;
 }
 
-.balken-rechts-oben:nth-child(23){}
 .balken-rechts-oben:nth-child(24){grid-row: 3 / span 2;}
 .balken-rechts-oben:nth-child(25){grid-row: 5 / span 2;border-bottom: none;}
 .balken-rechts-oben:nth-child(26){grid-row: 7 / span 3;border-bottom: none;}
@@ -182,9 +192,9 @@ h1{
 @media screen and (max-width: 1500px) {
     #cursor {display: none;}
 
-    h1{font-size: 14vh;}
+    .griddler h1{font-size: 14vh;}
 
-    p{font-size: 2vh;}
+    .griddler p{font-size: 2vh;}
 
     @keyframes takeslide { from {translate: 100vw 3.4vh;} to {translate: 7vw 3.4vh;}}
 
@@ -211,10 +221,10 @@ h1{
     .items-middle-right:nth-child(18){align-items: end;}
 }
 
-@media screen and (max-width: 900px) {
-    h1{font-size: 10vh;}
+@media screen and (max-width: 950px) {
+    .griddler h1{font-size: 14vh;}
 
-    p{font-size: 1.5vh;}
+    .griddler p{font-size: 1.5vh;}
 
     .items-middle-right:nth-child(15){grid-row: 3 / span 1;}
 
@@ -228,23 +238,23 @@ h1{
 
     @keyframes lineleft6{0%{width:0%;}100%{width: 200%;}}
 
-    @keyframes takeslide { from {translate: 100vw 2.5vh;} to {translate: 7vw 2.5vh;}}
+    @keyframes takeslide { from {translate: 100vw 3.4vh;} to {translate: 6vw 3.4vh;}}
 
-    @keyframes pictureslide { from {translate: -100vw 2.5vh;} to {translate: -1vw 2.5vh;}}
+    @keyframes pictureslide { from {translate: -100vw 3.4vh;} to {translate: -1vw 3.4vh;}}
 
-    @keyframes withslide { from {translate: -100vw 2.5vh;} to {translate: 2vw 2.5vh;}}
+    @keyframes withslide { from {translate: -100vw 3.4vh;} to {translate: 2vw 3.4vh;}}
 
     @keyframes threeslide{from {translate: 100vh -3.5vh;} to {translate: 2vh -3.5vh;}}
 
-    @keyframes moreslide { from {translate: -100vw 2.5vh;} to {translate: -1vw 2.5vh;}}
+    @keyframes moreslide { from {translate: -100vw 3.4vh;} to {translate: -1vw 3.4vh;}}
 
-    @keyframes meaningslide{ from {translate: -100vw  2.5vh;} to {translate: -15vw 2.5vh;}}
+    @keyframes meaningslide{ from {translate: -100vw  3.4vh;} to {translate: -3vw 3.4vh;}}
 
     @keyframes wordslideright{ from {translate: 100vw -3.5vh;} to {translate: 7vw -3.5vh;}}
 
     @keyframes wordslideleft{ from {translate: -100vw -3.5vh;} to {translate: -1vw -3.5vh;}}
 
-    @keyframes meaningslideright{from {translate: 100vw -3.5vh;} to {translate: -15vw -3.5vh;}}
+    @keyframes meaningslideright{from {translate: 100vw -3.5vh;} to {translate: -3vw -3.5vh;}}
 
     @keyframes textslide{from {translate: 100vw -1vh;} to {translate: -1vw -1vh;}}
 
@@ -272,6 +282,30 @@ h1{
 }
 
 @media screen and (max-width: 600px) {
+    .griddler h1{
+        font-size: 11vh;
+    }
+
+
+    @keyframes takeslide { from {translate: 100vw 2.8vh;} to {translate: 6vw 2.8vh;}}
+
+    @keyframes pictureslide { from {translate: -100vw 2.8vh;} to {translate: -1vw 2.8vh;}}
+
+    @keyframes withslide { from {translate: -100vw 2.8vh;} to {translate: 2vw 2.8vh;}}
+
+    @keyframes threeslide{from {translate: 100vh -3.5vh;} to {translate: 2vh -3.5vh;}}
+
+    @keyframes moreslide { from {translate: -100vw 2.8vh;} to {translate: -1vw 2.8vh;}}
+
+    @keyframes meaningslide{ from {translate: -100vw  2.8vh;} to {translate: -3vw 2.8vh;}}
+
+    @keyframes wordslideright{ from {translate: 100vw -3.5vh;} to {translate: 7vw -3.5vh;}}
+
+    @keyframes wordslideleft{ from {translate: -100vw -3.5vh;} to {translate: -1vw -3.5vh;}}
+
+    @keyframes meaningslideright{from {translate: 100vw -3.5vh;} to {translate: -3vw -3.5vh;}}
+
+    @keyframes meaningslidename{from {translate: 100vw -1vh;} to {translate: 1vw -1vh;}}
 
     @keyframes linemobilebottom{0%{width:0%;}100%{width: 200%;}}
 
