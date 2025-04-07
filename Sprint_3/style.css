@@ -107,14 +107,12 @@ h1{
 
 /* -------------------- DEFINING GRID -------------------- */
 
-@keyframes griddleranimation { 0% {grid-template-columns: 3vw 54vw 40vw 3vw;} 50% {grid-template-columns: 3vw 47vw 47vw 3vw;} 100% {grid-template-columns: 3vw 54vw 40vw 3vw;}}
 
 .griddler{
     display: grid;
     grid-template-columns: 3vw 47vw 47vw 3vw;
     grid-template-rows: 11.111111vh 11.111111vh 11.111111vh 11.111111vh 11.111111vh 11.111111vh 11.111111vh 11.111111vh 11.111111vh;
     overflow: hidden;
-    animation: griddleranimation 6s ease-in-out forwards;
     animation-iteration-count: infinite;
 }
 
