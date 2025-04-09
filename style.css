@@ -6,6 +6,12 @@
     padding: 0;
 }
 
+a {
+    text-decoration: none;
+    color: crimson;
+    padding: 2vw;
+}
+
 .container{
     display: grid;
     width: 100vw;
@@ -14,7 +20,7 @@
     grid-template-columns: 100vw;
 }
 
-a{
+.menu-container a{
     color: black;
     text-decoration: none;
     padding: 1vw;
@@ -30,7 +36,7 @@ h1{
     padding: 0.5vw;
 }
 
-a::before{
+.menu-container a::before{
     content: "";
     background: black;
     position: absolute;
@@ -42,12 +48,12 @@ a::before{
     transform: translateY(105%);
 }
 
-a:has(h1:hover)::before{
+.menu-container a:has(h1:hover)::before{
     transform: translateY(0);
     transition: all 200ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-a::after{
+.menu-container a::after{
     content: "";
     background: black;
     position: absolute;
@@ -59,7 +65,7 @@ a::after{
     transform: translateY(-105%);
 }
 
-a:has(h1:hover)::after{
+.menu-container a:has(h1:hover)::after{
     transform: translateY(0%);
     transition: all 200ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
@@ -89,19 +95,27 @@ p{
 
 .p-middle{
     text-align: center;
+    padding: 2vw;
 }
 
 .back{
     position: absolute;
     font-family: AkzidenzGrotesk;
-    top: 2vh;
-    left: 2vh;
+    top: 0;
+    left: 2vw;
     font-size: 10vh;
 }
 
+.container-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
 .site-content{
+    margin: 2vw;
     width: 60%;
-    box-shadow: 20px 20px 50px 0px rgba(0, 0, 0, 0.2);
     display: flex;
     justify-content: center;
     align-items: start;
